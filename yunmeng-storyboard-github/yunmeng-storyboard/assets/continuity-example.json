@@ -1,0 +1,28 @@
+{
+  "project": "纯文字示范：两人交接相机；不代表已存在用户资产",
+  "target_duration_seconds": 10,
+  "assets": {
+    "相机参考图": {"status": "missing", "source": null}
+  },
+  "shots": [
+    {
+      "id": "01",
+      "duration_seconds": 5,
+      "required_assets": ["相机参考图"],
+      "reference_bindings": {},
+      "state_start": {"相机.持有": "甲双手", "相机.镜头方向": "朝前方空处", "乙.位置": "甲右侧"},
+      "state_end": {"相机.持有": "甲乙共同托持", "相机.镜头方向": "朝前方空处", "乙.位置": "甲右侧"},
+      "action": "甲将相机递近，乙双手接触机身底部；结束时两人共同托持。"
+    },
+    {
+      "id": "02",
+      "duration_seconds": 5,
+      "required_assets": ["相机参考图"],
+      "reference_bindings": {},
+      "state_start": {"相机.持有": "甲乙共同托持", "相机.镜头方向": "朝前方空处", "乙.位置": "甲右侧"},
+      "state_end": {"相机.持有": "乙双手", "相机.镜头方向": "朝前方空处", "乙.位置": "甲右侧"},
+      "transition": {"type": "continuous", "changes": {}},
+      "action": "乙握稳后甲松手收回；相机由乙独立持有。"
+    }
+  ]
+}
